@@ -21,5 +21,5 @@ docker logs rancherserver 2>&1 | grep "Bootstrap Password:"
 
 echo "URL de acesso:"
 echo ""
-echo https://fiap.$(curl -s checkip.amazonaws.com).nip.io
+echo https://fiap.$(curl -s checkip.amazonaws.com).sslip.io
 echo ""
