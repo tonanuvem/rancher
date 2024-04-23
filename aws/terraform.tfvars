@@ -1,9 +1,9 @@
 
 # AWS access key used to create infrastructure
-aws_access_key = "INSERIR_AK"
+aws_access_key = ""
 
 # AWS secret key used to create AWS infrastructure
-aws_secret_key = "INSERIR_SK"
+aws_secret_key = ""
 
 # Admin password to use for Rancher server bootstrap, min. 12 characters
 rancher_server_admin_password = "fiapadmin"
