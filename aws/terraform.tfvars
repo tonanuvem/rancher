@@ -6,7 +6,7 @@ aws_access_key = ""
 aws_secret_key = ""
 
 # Admin password to use for Rancher server bootstrap, min. 12 characters
-rancher_server_admin_password = "fiapadmin"
+rancher_server_admin_password = "fiapadmin123"
 
 # Add a windows node to the workload cluster
 add_windows_node = false
