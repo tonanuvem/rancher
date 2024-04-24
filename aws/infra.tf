@@ -171,7 +171,8 @@ resource "aws_instance" "fiap_master" {
   }
 
   user_data = templatefile(
-    "${path.module}/files/userdata_quickstart_node.template",
+    #"${path.module}/files/userdata_quickstart_node.template",
+    "${path.module}/files/userdata_quickstart_node_master.template",
     {
       register_command = module.rancher_common.custom_cluster_command
     }
