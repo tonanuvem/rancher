@@ -149,7 +149,7 @@ module "rancher_common" {
   admin_password = var.rancher_server_admin_password
 
   workload_kubernetes_version = var.workload_kubernetes_version
-  workload_cluster_name       = "fiap-k8s-rancher"
+  workload_cluster_name       = "fiap"
 }
 
 # AWS EC2 instance for creating a single node workload cluster
