@@ -1,13 +1,17 @@
-output "rancher_server_url" {
+output "aws_rancher_url" {
   value = module.rancher_common.rancher_url
 }
 
-output "usuario_login" {
+output "aws_rancher_usuario_login" {
   value = "admin"
 }
 
-output "senha_login" {
+output "aws_rancher_usuario_senha" {
   value = "fiapadmin123"
+}
+
+output "cluster_criado" {
+  value = "--------- OK --------- "
 }
 
 output "fiap_master_ip" {
