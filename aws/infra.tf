@@ -238,7 +238,7 @@ resource "aws_instance" "fiap_worker1" {
 
   tags = {
     Name    = "${var.prefix}-k8s-worker1"
-    Creator = "rancher-quickstart"
+    Creator = "fiap-rancher-aws"
   }
 }
 
@@ -282,6 +282,6 @@ resource "aws_instance" "fiap_worker2" {
 
   tags = {
     Name    = "${var.prefix}-k8s-worker2"
-    Creator = "rancher-quickstart"
+    Creator = "fiap-rancher-aws"
   }
 }
