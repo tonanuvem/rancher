@@ -2,7 +2,7 @@ output "rancher_server_url" {
   value = module.rancher_common.rancher_url
 }
 
-output "usuario_login {
+output "usuario_login" {
   value = "admin"
 }
 
