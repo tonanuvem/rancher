@@ -193,7 +193,7 @@ resource "aws_instance" "fiap_master" {
   }
 
   tags = {
-    Name    = "${var.prefix}-fiap-rancher-master"
+    Name    = "${var.prefix}-k8s-master"
     Creator = "rancher-quickstart"
   }
 }
@@ -237,7 +237,7 @@ resource "aws_instance" "fiap_worker1" {
   }
 
   tags = {
-    Name    = "${var.prefix}-fiap-rancher-worker1"
+    Name    = "${var.prefix}-k8s-worker1"
     Creator = "rancher-quickstart"
   }
 }
@@ -281,7 +281,7 @@ resource "aws_instance" "fiap_worker2" {
   }
 
   tags = {
-    Name    = "${var.prefix}-fiap-rancher-worker2"
+    Name    = "${var.prefix}-k8s-worker2"
     Creator = "rancher-quickstart"
   }
 }
