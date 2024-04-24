@@ -2,7 +2,8 @@ terraform {
   required_providers {
     helm = {
       source  = "hashicorp/helm"
-      version = "2.10.1"
+      #version = "2.10.1"
+      version = "2.13.1"
     }
     local = {
       source  = "hashicorp/local"
