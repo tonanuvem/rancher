@@ -15,7 +15,7 @@ resource "aws_instance" "quickstart_node_win" {
   user_data = templatefile(
     "${path.module}/files/userdata_quickstart_windows.template",
     {
-      register_command = module.rancher_common.custom_cluster_windows_command
+      register_command = "not used" #module.rancher_common.custom_cluster_windows_command
     }
   )
 
