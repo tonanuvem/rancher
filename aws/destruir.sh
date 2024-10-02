@@ -9,6 +9,7 @@ echo "RANCHER_VPC_ID = $RANCHER_VPC_ID. Finalizando o Rancher server..."
 echo ""
 chmod +x delete_vpc.sh
 ./delete_vpc.sh --region us-east-1 --vpc-id $RANCHER_VPC_ID --non-interactive 
+# https://github.com/lianghong/delete_vpc/blob/master/delete_vpc.sh
 echo ""
 echo ""
 echo "Finalizando o restante do projeto"
