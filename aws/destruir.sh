@@ -7,9 +7,10 @@
 RANCHER_VPC_ID=$(aws ec2 describe-vpcs --query "Vpcs[].VpcId" --output text --filters 'Name=tag:Name,Values=*rancher-vpc')
 echo "RANCHER_VPC_ID = $RANCHER_VPC_ID. Finalizando o Rancher server..."
 echo ""
-sh delete_vpc.sh --region us-east-1 --vpc-id $RANCHER_VPC_ID
+chmod +x delete_vpc.sh
+./delete_vpc.sh --region us-east-1 --vpc-id $RANCHER_VPC_ID --non-interactive 
 echo ""
 
 echo "Finalizando o restante do projeto"
 echo ""
-terraform init && terraform destroy -auto-approve
+terraform destroy -auto-approve
