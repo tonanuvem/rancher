@@ -10,7 +10,9 @@ echo ""
 chmod +x delete_vpc.sh
 ./delete_vpc.sh --region us-east-1 --vpc-id $RANCHER_VPC_ID --non-interactive 
 echo ""
-
+echo ""
 echo "Finalizando o restante do projeto"
 echo ""
-terraform destroy -auto-approve
+#terraform destroy -auto-approve
+rm -rf .terraform
+echo "FIM"
