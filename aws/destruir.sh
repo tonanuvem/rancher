@@ -16,4 +16,5 @@ echo "Finalizando o restante do projeto"
 echo ""
 #terraform destroy -auto-approve
 rm -rf .terraform
+rm -rf id_rsa id_rsa.pub kube_config_server.yaml kube_config_workload.yaml terraform.tfstate
 echo "FIM"
