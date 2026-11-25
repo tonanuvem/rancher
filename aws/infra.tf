@@ -178,21 +178,6 @@ resource "aws_instance" "fiap_master" {
     }
   )
 
-  provisioner "remote-exec" {
-    inline = [
-      "echo 'Waiting for cloud-init to complete...'",
-      "cloud-init status --wait > /dev/null",
-      "echo 'Completed cloud-init!'",
-    ]
-
-    connection {
-      type        = "ssh"
-      host        = self.public_ip
-      user        = local.node_username
-      private_key = tls_private_key.global_key.private_key_pem
-    }
-  }
-
   tags = {
     Name    = "${var.prefix}-k8s-master"
     Creator = "fiap-rancher-aws"
@@ -222,21 +207,6 @@ resource "aws_instance" "fiap_worker1" {
     }
   )
 
-  provisioner "remote-exec" {
-    inline = [
-      "echo 'Waiting for cloud-init to complete...'",
-      "cloud-init status --wait > /dev/null",
-      "echo 'Completed cloud-init!'",
-    ]
-
-    connection {
-      type        = "ssh"
-      host        = self.public_ip
-      user        = local.node_username
-      private_key = tls_private_key.global_key.private_key_pem
-    }
-  }
-
   tags = {
     Name    = "${var.prefix}-k8s-worker1"
     Creator = "fiap-rancher-aws"
@@ -265,21 +235,6 @@ resource "aws_instance" "fiap_worker2" {
       register_command = module.rancher_common.custom_cluster_command
     }
   )
-
-  provisioner "remote-exec" {
-    inline = [
-      "echo 'Waiting for cloud-init to complete...'",
-      "cloud-init status --wait > /dev/null",
-      "echo 'Completed cloud-init!'",
-    ]
-
-    connection {
-      type        = "ssh"
-      host        = self.public_ip
-      user        = local.node_username
-      private_key = tls_private_key.global_key.private_key_pem
-    }
-  }
 
   tags = {
     Name    = "${var.prefix}-k8s-worker2"
