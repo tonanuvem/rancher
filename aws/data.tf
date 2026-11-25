@@ -10,7 +10,8 @@ data "aws_ami" "sles" {
 
   filter {
     name   = "name"
-    values = ["suse-sles-15-sp3*"]
+    values = ["suse-sles-15-sp6-v*-hvm-ssd-x86_64"]
+    #values = ["suse-sles-15-sp3*"]
   }
 
   filter {
