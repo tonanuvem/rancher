@@ -11,7 +11,7 @@ terraform {
     }
     rancher2 = {
       source  = "rancher/rancher2"
-      version = "3.0.0"
+      version = "15.3.0"
     }
     ssh = {
       source  = "loafoe/ssh"

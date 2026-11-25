@@ -9,7 +9,7 @@ resource "helm_release" "cert_manager" {
   wait             = true
 
   set {
-    name  = "installCRDs"
+    name  = "crds.enabled"
     value = "true"
   }
 }
